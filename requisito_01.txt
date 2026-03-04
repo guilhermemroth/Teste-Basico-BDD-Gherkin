@@ -1,0 +1,10 @@
+Descrição: Um usuário do site DemoSauce deseja realizar login na plataforma utilizando suas credenciais
+para acessar o inventário de produtos.
+
+https://www.saucedemo.com/
+
+Critério do aceite 01:
+
+> Login bem sucedido com credenciais válidas
+    > Ele deve ser redirecionado para a página de inventário
+    > URL deve incluir /inventory.html
