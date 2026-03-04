@@ -14,7 +14,9 @@ Scenario: Title
     Then testable result
 
 
-Funcionalidade: Login in the Saucedemo website
+Feature: Login in the Saucedemo website
+
+    Feature Description: Título
 
 Scenario: Login with valid credentials
 Given that user acesses the login page on Saucedemo
