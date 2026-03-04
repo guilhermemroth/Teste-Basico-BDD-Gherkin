@@ -35,7 +35,7 @@ Scenario: Login with wrong password
         And inserts an invalid password
     When user clicks the login button
     Then user must stay in the login page
-        And an error message must show up
+        And an error message must show up saying that username and password do not match any user
     Examples:
         | standard_user |
         | secre_tsauce  |
@@ -46,7 +46,7 @@ Scenario: Login with blank password
         And doesn't insert a password
     When user clicks the login button
     Then user must stay in the login page
-        And an error message must show up
+        And an error message must show up saying that the field in blank is necessary
     Examples:
         | standard_user |
         |               |
@@ -57,7 +57,7 @@ Scenario: Login with blank username
         And inserts an password
     When user clicks the login button
     Then user must stay in the login page
-        And an error message must show up
+        And an error message must show up saying that the field in blank is necessary
     Examples:
         |               |
         | secret_sauce  |
@@ -68,7 +68,7 @@ Scenario: Login with blank username and password
         And doesn't insert password
     When user clicks the login button
     Then user must stay in the login page
-        And an error message must show up
+        And an error message must show up saying that the field in blank is necessary
     Examples:
         |               |
         |               |
