@@ -26,7 +26,7 @@ Scenario: Login with valid credentials
     Then user must be redirect to inventary page
         And the url must have /inventory.html
     Examples:
-        | standart_user |
+        | standard_user |
         | secret_sauce  |
 
 Scenario: Login with wrong password
@@ -37,5 +37,38 @@ Scenario: Login with wrong password
     Then user must stay in the login page
         And an error message must show up
     Examples:
-        | standart_user |
+        | standard_user |
         | secre_tsauce  |
+
+Scenario: Login with blank password
+    Given that user acesses the login page on Saucedemo
+        And inserts a username
+        And doesn't insert a password
+    When user clicks the login button
+    Then user must stay in the login page
+        And an error message must show up
+    Examples:
+        | standard_user |
+        |               |
+
+Scenario: Login with blank username
+    Given that user acesses the login page on Saucedemo
+        And doesn't insert a username
+        And inserts an password
+    When user clicks the login button
+    Then user must stay in the login page
+        And an error message must show up
+    Examples:
+        |               |
+        | secret_sauce  |
+
+Scenario: Login with blank username and password
+    Given that user acesses the login page on Saucedemo
+        And doesn't insert username
+        And doesn't insert password
+    When user clicks the login button
+    Then user must stay in the login page
+        And an error message must show up
+    Examples:
+        |               |
+        |               |
