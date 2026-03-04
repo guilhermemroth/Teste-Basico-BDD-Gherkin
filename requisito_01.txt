@@ -14,3 +14,23 @@ Critério do aceite 01:
     > O usuário insere um username válido com um password incorreto
     > Uma mensagem de erro deve ser exibida indicando que o nome e a senha não correspondem
     e ele deve permanecer na pagina de login
+
+************************************************************
+3. Falha no login com campo de senha vazio:
+    > O usuário insere um username e o campo de password vazio
+    > Uma mensagem de erro deve ser exibida indicando que o campo vazio deve ser preenchido
+    e ele deve permanecer na pagina de login
+
+************************************************************
+4. Falha no login com campo de usuário vazio:
+    > O usuário deixa o campo username vazio e insere um password
+    > Uma mensagem de erro deve ser exibida indicando que o campo vazio deve ser preenchido
+    e ele deve permanecer na pagina de login
+
+************************************************************
+5. Falha no login com ambos os campos vazios:
+    > O usuário deixa o campo do username e o campo do password vazios
+    > Uma mensagem de erro deve ser exibida indicando que o campo vazio deve ser preenchido
+    e ele deve permanecer na pagina de login
+
+************************************************************
