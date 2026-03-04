@@ -8,3 +8,9 @@ Critério do aceite 01:
 > Login bem sucedido com credenciais válidas
     > Ele deve ser redirecionado para a página de inventário
     > URL deve incluir /inventory.html
+
+************************************************************
+2. Falha no login com senha incorreta:
+    > O usuário insere um username válido com um password incorreto
+    > Uma mensagem de erro deve ser exibida indicando que o nome e a senha não correspondem
+    e ele deve permanecer na pagina de login
