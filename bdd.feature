@@ -19,9 +19,23 @@ Feature: Login in the Saucedemo website
     Feature Description: Título
 
 Scenario: Login with valid credentials
-Given that user acesses the login page on Saucedemo
-    And inserts a valid username
-    And inserts a valid password
-When user clicks the login button
-Then user must be redirect to inventary page
-    And the url must have /inventory.html
+    Given that user acesses the login page on Saucedemo
+        And inserts a valid username
+        And inserts a valid password
+    When user clicks the login button
+    Then user must be redirect to inventary page
+        And the url must have /inventory.html
+    Examples:
+        | standart_user |
+        | secret_sauce  |
+
+Scenario: Login with wrong password
+    Given that user acesses the login page on Saucedemo
+        And inserts a valid username
+        And inserts an invalid password
+    When user clicks the login button
+    Then user must stay in the login page
+        And an error message must show up
+    Examples:
+        | standart_user |
+        | secre_tsauce  |
