@@ -1,128 +1,117 @@
 <h1>Teste Básico com BDD e Gherkin</h1>
 
-<p>
-Este repositório apresenta um exemplo simples de utilização de 
-<strong>BDD (Behavior Driven Development)</strong> utilizando a linguagem 
-<strong>Gherkin</strong> para descrever cenários de testes de forma clara e legível.
-</p>
+  <p>
+    Este repositório contém um conjunto de exemplos simples de <strong>testes comportamentais utilizando BDD (Behavior Driven Development)</strong>
+    escritos na linguagem <strong>Gherkin</strong>.
+  </p>
 
-<p>
-O objetivo do projeto é demonstrar a estrutura básica de um teste orientado a comportamento,
-onde os requisitos são descritos em linguagem próxima à natural, facilitando o entendimento
-tanto para desenvolvedores quanto para analistas e stakeholders.
-</p>
+  <p>
+    O objetivo do projeto é demonstrar a estrutura básica de cenários de teste orientados ao comportamento, utilizando uma sintaxe legível
+    que descreve o funcionamento esperado de um sistema do ponto de vista do usuário.
+  </p>
 
-<h2>Conceitos Utilizados</h2>
+  <hr />
 
-<h3>BDD — Behavior Driven Development</h3>
+  <h2>O que é BDD?</h2>
 
-<p>
-BDD é uma abordagem de desenvolvimento orientada ao comportamento do sistema.
-Nela, os testes são descritos a partir da perspectiva do usuário e do funcionamento esperado da aplicação.
-</p>
+  <p>
+    <strong>Behavior Driven Development (BDD)</strong> é uma abordagem de desenvolvimento e testes que descreve o comportamento esperado de um sistema
+    através de cenários baseados em linguagem natural.
+  </p>
 
-<p>Essa abordagem permite:</p>
+  <p>
+    Em vez de focar diretamente na implementação do código, o BDD descreve <strong>como o sistema deve se comportar para o usuário final</strong>.
+  </p>
 
-<ul>
-<li>Melhor comunicação entre equipe técnica e negócio</li>
-<li>Documentação executável do sistema</li>
-<li>Clareza na definição de requisitos</li>
-<li>Estruturação de testes automatizados</li>
-</ul>
+  <hr />
 
-<h3>Gherkin</h3>
+  <h2>O que é Gherkin?</h2>
 
-<p>
-Gherkin é uma linguagem estruturada usada para escrever cenários de teste em formato legível.
-</p>
+  <p>
+    <strong>Gherkin</strong> é uma linguagem usada para escrever cenários de teste em formato legível e estruturado.
+  </p>
 
-<p>Ela utiliza palavras-chave padronizadas como:</p>
+  <p>Os cenários são escritos utilizando palavras-chave como:</p>
 
-<ul>
-<li><strong>Feature</strong> → descreve a funcionalidade</li>
-<li><strong>Scenario</strong> → descreve um cenário específico</li>
-<li><strong>Given</strong> → estado inicial do sistema</li>
-<li><strong>When</strong> → ação executada</li>
-<li><strong>Then</strong> → resultado esperado</li>
-</ul>
+  <ul>
+    <li><code>Feature</code></li>
+    <li><code>Scenario</code></li>
+    <li><code>Given</code></li>
+    <li><code>When</code></li>
+    <li><code>Then</code></li>
+  </ul>
 
-<p>Exemplo de cenário:</p>
+  <p>
+    Essa sintaxe permite que desenvolvedores, analistas e stakeholders entendam facilmente o comportamento esperado do sistema.
+  </p>
 
-<pre>
-Feature: Login no sistema
+  <p class="muted"><strong>Exemplo de cenário:</strong></p>
+
+  <pre>Feature: Login do usuário
 
 Scenario: Login com credenciais válidas
 Given que o usuário está na página de login
 When ele informa usuário e senha válidos
-Then o sistema deve permitir o acesso
-</pre>
+Then o sistema deve permitir o acesso</pre>
 
-<h2>Estrutura do Projeto</h2>
+  <hr />
 
-<p>
-A estrutura do projeto é composta por arquivos <code>.feature</code> contendo os cenários de teste escritos em Gherkin.
-</p>
+  <h2>Estrutura do Projeto</h2>
 
-<pre>
-/features
-   exemplo.feature
-</pre>
+  <pre>Teste-Basico-BDD-Gherkin
+│
+├── features
+│   ├── authentication.feature
+│   ├── bdd.feature
+│   ├── field_validation.feature
+│   └── login.feature
+│
+└── README.md</pre>
 
-<p>
-Cada arquivo <code>.feature</code> descreve uma funcionalidade do sistema e contém um ou mais cenários de comportamento.
-</p>
+  <p>
+    Cada arquivo <code>.feature</code> representa uma funcionalidade do sistema e contém cenários que descrevem o comportamento esperado.
+  </p>
 
-<h2>Objetivo do Projeto</h2>
+  <hr />
 
-<p>Este projeto foi criado com fins educacionais para demonstrar:</p>
+  <h2>Objetivo do Projeto</h2>
 
-<ul>
-<li>Estrutura básica de testes utilizando BDD</li>
-<li>Escrita de cenários utilizando Gherkin</li>
-<li>Organização de testes comportamentais</li>
-<li>Introdução a práticas de qualidade de software</li>
-</ul>
+  <p>Este projeto foi criado com fins educacionais para praticar:</p>
 
-<h2>Possíveis Evoluções do Projeto</h2>
+  <ul>
+    <li>escrita de cenários em <strong>BDD</strong></li>
+    <li>utilização da linguagem <strong>Gherkin</strong></li>
+    <li>organização de arquivos <code>.feature</code></li>
+    <li>modelagem de comportamento de sistema</li>
+  </ul>
 
-<ul>
-<li>Integração com <strong>Cucumber</strong></li>
-<li>Automação de testes com <strong>Selenium</strong> ou <strong>Playwright</strong></li>
-<li>Implementação de <strong>Step Definitions</strong></li>
-<li>Estrutura de <strong>Page Object Model</strong></li>
-<li>Integração com <strong>CI/CD (GitHub Actions)</strong></li>
-</ul>
+  <hr />
 
-<h2>Tecnologias Relacionadas</h2>
+  <h2>Possíveis Evoluções</h2>
 
-<ul>
-<li>Cucumber</li>
-<li>Selenium</li>
-<li>Playwright</li>
-<li>Cypress</li>
-<li>Behave</li>
-</ul>
+  <p>Este projeto pode ser expandido futuramente com:</p>
 
-<h2>Autor</h2>
+  <ul>
+    <li>automação de testes utilizando <strong>Cucumber</strong></li>
+    <li>integração com <strong>Selenium</strong> ou <strong>Playwright</strong></li>
+    <li>criação de <strong>Step Definitions</strong></li>
+    <li>execução automática com <strong>CI/CD (GitHub Actions)</strong></li>
+  </ul>
 
-<p>
-<strong>Guilherme Roth</strong>
-</p>
+  <hr />
 
-<p>
-Projeto desenvolvido como estudo de <strong>BDD, Gherkin e fundamentos de testes de software</strong>.
-</p>
+  <h2>Autor</h2>
 
-<p>
-Este projeto faz parte do curso <strong>BDD Simplificado</strong>, de autoria de 
-<strong>Edmar Nunes</strong>, disponível na Udemy:
-</p>
+  <p><strong>Guilherme Roth</strong></p>
 
-<p>
-<a href="https://www.udemy.com/course/bdd-simplificado/" target="_blank">
-https://www.udemy.com/course/bdd-simplificado/
-</a>
-</p>
+  <hr />
 
+  <p>
+    Este projeto faz parte do curso <strong>BDD Simplificado</strong>, de autoria de <strong>Edmar Nunes</strong>, disponível na Udemy:
+    <br />
+    <a href="https://www.udemy.com/course/bdd-simplificado/" target="_blank" rel="noopener noreferrer">
+      https://www.udemy.com/course/bdd-simplificado/
+    </a>
+  </p>
 </body>
 </html>
